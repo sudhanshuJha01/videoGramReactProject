@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feed = () => {
   return (
-    <div className="">
+    <div className="bg-red-900">
         Feed
     </div>
   )

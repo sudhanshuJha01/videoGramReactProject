@@ -1,12 +1,30 @@
 import React from "react";
-import { HomeIcon, Logo } from "../assets/icons";
-
+import { Link } from "react-router-dom";
+import { SearchIcon, AuthBTn, HamBurger } from "../assets/icons";
+import logoImage from "../../public/logoImage.png";
+import { VideoCameraIcon } from "@heroicons/react/16/solid";
 const NavBar = () => {
   return (
-    <section className="">
-      <figure className="">
-        <Logo />
-      </figure>
+    <section className=" min-h-16 bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
+        <Link to={"/"}>
+          <img src={logoImage} width={160} height={120} alt="logo" />
+        </Link>
+      <input
+        className="w-[40%] max-sm:hidden p-1 pl-7 max-md:ml-12 rounded-2xl ml-44 mr-2 outline-none text-black font-semibold"
+        type="text"
+        placeholder="Search.."
+      />
+      <SearchIcon />
+      <div className="flex  gap-7 max-sm:ml-16 max-md:ml-24 lg:ml-52 max-lg:ml-52 items-end justify-end">
+        <VideoCameraIcon className="w-7 hover:rounded-lg cursor-pointer hover:bg-slate-700 hover:p-1 " />
+        <div className="flex gap-2 max-lg:hidden">
+          <AuthBTn label="Sign Up" />
+          <AuthBTn label="Sign In" />
+        </div>
+        <div className="lg:hidden">
+          <HamBurger />
+        </div>
+      </div>
     </section>
   );
 };
