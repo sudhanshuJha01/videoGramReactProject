@@ -1,6 +1,8 @@
 import React from 'react';
 import { FireIcon, ShoppingBagIcon, MusicalNoteIcon, TvIcon, SignalIcon, RocketLaunchIcon, NewspaperIcon, AcademicCapIcon, TrophyIcon, HeartIcon, MicrophoneIcon } from '@heroicons/react/16/solid';
 
+export { FireIcon, ShoppingBagIcon, MusicalNoteIcon, TvIcon, SignalIcon, RocketLaunchIcon, NewspaperIcon, AcademicCapIcon, TrophyIcon, HeartIcon, MicrophoneIcon }
+
 const explore = [
     { label: "Trending", icon: <FireIcon className="w-7 my-2" /> },
     { label: "Shopping", icon: <ShoppingBagIcon className="w-7 my-2" /> },

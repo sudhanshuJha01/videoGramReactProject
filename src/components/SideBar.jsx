@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { HomeIcon, ClockIcon } from "@heroicons/react/16/solid";
 import SideBarBtn from "./SideBarBtn";
-import explore from "../constants/sideBarItems";
+import explore from "./sideBarItems";
 
 const SideBar = () => {
- 
   return (
-    <div className="max-md:hidden w-1/6 h-full p-3 m-0.5 bg-slate-950 rounded-md text-white font-serif">
+    <div className="max-md:hidden min-h-screen w-1/6 p-3 m-0.5 bg-slate-950 rounded-md text-white font-serif">
       <div>
         <SideBarBtn label={"Home"} icon={<HomeIcon className="w-7 my-2" />} />
         <SideBarBtn
@@ -19,7 +18,7 @@ const SideBar = () => {
         <h1>Explore</h1>
         <ul>
         {explore.map(item=>(
-          <li><SideBarBtn label={item.label} icon={item.icon} /></li>
+          <li key={item.label}><SideBarBtn label={item?.label} icon={item?.icon} /></li>
         ))}
         </ul>
       </div>
