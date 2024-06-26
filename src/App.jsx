@@ -1,7 +1,7 @@
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import {NavBar , SideBar , Feed} from './components/index.js'
-
-
+import SignIn from "./pages/AuthPages/SignIn.jsx";
+import SignUp from "./pages/AuthPages/SignUp.jsx";
 const App = () => {
 
   return (
@@ -12,11 +12,14 @@ const App = () => {
     <SideBar/>
     <Routes>
         <Route path="/"  element={<Feed/>} />
+        <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
     </Routes>
     </div>
   </BrowserRouter>
   </div>
   )
 }
+
 
 export default App

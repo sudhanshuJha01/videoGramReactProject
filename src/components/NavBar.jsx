@@ -18,8 +18,12 @@ const NavBar = () => {
       <div className="flex  gap-7 max-sm:ml-16 max-md:ml-24 lg:ml-52 max-lg:ml-52 items-end justify-end">
         <VideoCameraIcon className="w-7 hover:rounded-lg cursor-pointer hover:bg-slate-700 hover:p-1 " />
         <div className="flex gap-2 max-lg:hidden">
+          <Link to={'/signup'}>
           <AuthBTn label="Sign Up" />
+          </Link>
+          <Link to={'/signin'}>
           <AuthBTn label="Sign In" />
+          </Link>
         </div>
         <div className="lg:hidden">
           <HamBurger />
