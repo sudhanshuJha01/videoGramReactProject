@@ -5,7 +5,7 @@ import logoImage from "../../public/logoImage.png";
 import { VideoCameraIcon } from "@heroicons/react/16/solid";
 const NavBar = () => {
   return (
-    <section className=" min-h-16 bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
+    <section className=" min-h-16 relative bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
         <Link to={"/"}>
           <img src={logoImage} width={160} height={120} alt="logo" />
         </Link>
