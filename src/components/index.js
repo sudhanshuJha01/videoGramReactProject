@@ -6,6 +6,7 @@ import SideBarBtn from "./SideBarBtn";
 import VideoCard from "./VideoCard";
 import Tumbnail from "./Tumbnail";
 import VideoInfoCard from "./VideoInfoCard";
+import HamBurgurComponent from "./HamBurgurComponent";
 export {
     NavBar,
     SideBar,
@@ -14,5 +15,6 @@ export {
     SideBarBtn,
     VideoCard,
     Tumbnail,
-    VideoInfoCard
+    VideoInfoCard,
+    HamBurgurComponent
 }

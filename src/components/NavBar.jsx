@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SearchIcon, AuthBTn, HamBurger } from "../assets/icons";
 import logoImage from "../../public/logoImage.png";
 import { VideoCameraIcon } from "@heroicons/react/16/solid";
+import { changeHamStatus } from "../features/hamburgurStatusSlice";
+import { useSelector , useDispatch } from "react-redux";
 const NavBar = () => {
+ const [currStatus , setCurrStatus] = useState(false);
+ const dispatch = useDispatch() 
+ const handleHamburgurOnSmallScreen = ()=>{
+   dispatch(changeHamStatus(finalStatus))
+   setFinalStatus(status)
+   
+  }
+  console.log(finalStatus);
+  const status = useSelector(state => state.hamburgurStatus.status);
   return (
-    <section className=" min-h-16 relative bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
+    <section className=" min-h-16 w-full z-10 sticky top-0 bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
         <Link to={"/"}>
           <img src={logoImage} width={160} height={120} alt="logo" />
         </Link>
@@ -26,11 +37,13 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="lg:hidden">
-          <HamBurger />
+        <button onClick={handleHamburgurOnSmallScreen}>  
+          <HamBurger /> 
+        </button>  
+       
         </div>
       </div>
     </section>
-  );
-};
+  );};
 
 export default NavBar;

@@ -3,7 +3,7 @@ const VideoCard = () => {
   return (
     <>
     
-    <div className='flex flex-wrap items-center gap-5  mx-auto justify-evenly'>
+    <div className='flex flex-wrap items-center gap-5  mx-auto justify-evenly '>
       <div className='my-7'>
       <Tumbnail/>
       <VideoInfoCard/>

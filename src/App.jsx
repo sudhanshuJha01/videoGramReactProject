@@ -5,7 +5,7 @@ import SignUp from "./pages/AuthPages/SignUp.jsx";
 const App = () => {
 
   return (
-    <div className="bg-slate-900 text-white w-full min-h-full absolute">
+    <div className="bg-slate-900 relative text-white w-full min-h-full">
     <BrowserRouter>
     <NavBar/>
     <div className="flex">

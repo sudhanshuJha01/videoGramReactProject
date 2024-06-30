@@ -6,7 +6,7 @@ import explore from "./sideBarItems";
 const SideBar = () => {
   return (
     <div className="max-md:hidden min-h-screen w-1/6 p-3 m-0.5 bg-slate-950 rounded-md text-white font-serif">
-      <div>
+      <div> 
         <SideBarBtn label={"Home"} icon={<HomeIcon className="w-7 my-2" />} />
         <SideBarBtn
           label={"History"}
