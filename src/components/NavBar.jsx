@@ -9,11 +9,11 @@ const NavBar = () => {
  const [currStatus , setCurrStatus] = useState(false);
  const dispatch = useDispatch() 
  const handleHamburgurOnSmallScreen = ()=>{
-   dispatch(changeHamStatus(finalStatus))
-   setFinalStatus(status)
+   dispatch(changeHamStatus(currStatus))
+   setCurrStatus(!(currStatus));
    
   }
-  console.log(finalStatus);
+  console.log(currStatus);
   const status = useSelector(state => state.hamburgurStatus.status);
   return (
     <section className=" min-h-16 w-full z-10 sticky top-0 bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
