@@ -1,21 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
-    status:false
-}
-
+    status: false
+};
 
 export const hamburgurStatusSlice = createSlice({
-    name:"hamburgurStatus",
+    name: "hamburgurStatus",
     initialState,
-    reducers:{
-        changeHamStatus:(state , action)=>{
-            state.status = !(action.payload.status)
+    reducers: {
+        changeHamStatus: (state) => {
+            state.status = !state.status;
         }
     }
+});
 
-})
-
-export const {changeHamStatus} = hamburgurStatusSlice.actions;
+export const { changeHamStatus } = hamburgurStatusSlice.actions;
 export default hamburgurStatusSlice.reducer;
+

@@ -3,18 +3,13 @@ import { Link } from "react-router-dom";
 import { SearchIcon, AuthBTn, HamBurger } from "../assets/icons";
 import logoImage from "../../public/logoImage.png";
 import { VideoCameraIcon } from "@heroicons/react/16/solid";
+import { useDispatch , useSelector } from "react-redux";
 import { changeHamStatus } from "../features/hamburgurStatusSlice";
-import { useSelector , useDispatch } from "react-redux";
 const NavBar = () => {
- const [currStatus , setCurrStatus] = useState(false);
- const dispatch = useDispatch() 
- const handleHamburgurOnSmallScreen = ()=>{
-   dispatch(changeHamStatus(currStatus))
-   setCurrStatus(!(currStatus));
-   
+  const dispatch = useDispatch()
+  const handleHamStatus=()=>{
+    dispatch(changeHamStatus());
   }
-  
-  const status = useSelector(state => state.hamburgurStatus.status);
   return (
     <section className=" min-h-16 w-full z-10 sticky top-0 bg-slate-950 p-3  rounded-lg flex items-center max-sm:gap-5 ">
         <Link to={"/"}>
@@ -36,9 +31,10 @@ const NavBar = () => {
           <AuthBTn label="Sign In" />
           </Link>
         </div>
-        <div className="lg:hidden">
-        <button onClick={handleHamburgurOnSmallScreen}>  
-          <HamBurger /> 
+        <div className="md:hidden">
+        <button onClick={handleHamStatus
+        }>  
+          <HamBurger/> 
         </button>  
        
         </div>
